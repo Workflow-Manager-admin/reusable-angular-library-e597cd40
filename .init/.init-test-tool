@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/reusable-angular-library-e597cd40/angular_library_frontend"
+}
