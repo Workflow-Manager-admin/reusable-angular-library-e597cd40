@@ -21,6 +21,27 @@ export default [
       "*.config.mjs",
     ]
   },
+  // Allow node environment for JavaScript config files, such as karma.conf.js, ng-package.js, etc.
+  {
+    files: [
+      "**/karma.conf.js",
+      "**/*.conf.js",
+      "**/ng-package*.js",
+      "**/*.config.js"
+    ],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "script",
+      globals: {
+        module: "writable",
+        require: "readonly",
+        __dirname: "readonly",
+        process: "readonly",
+        exports: "writable",
+      },
+    },
+    rules: {},
+  },
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
